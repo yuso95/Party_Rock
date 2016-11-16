@@ -66,7 +66,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bh4-py-9pN">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="5Ua-el-4a0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PartyCell" rowHeight="70" id="5Ua-el-4a0" customClass="PartyCell" customModule="Party_Rock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Ua-el-4a0" id="zjp-5X-vJ1">
@@ -85,7 +85,6 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.36838239301420517" green="1" blue="0.25372244341110328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="NdD-LS-8ki" secondAttribute="bottom" constant="7" id="2hA-9t-RrJ"/>
                                                 <constraint firstItem="NdD-LS-8ki" firstAttribute="leading" secondItem="56r-Jg-QeK" secondAttribute="trailing" constant="8" id="3Ga-q4-zhs"/>
@@ -97,6 +96,10 @@
                                                 <constraint firstItem="NdD-LS-8ki" firstAttribute="top" secondItem="zjp-5X-vJ1" secondAttribute="topMargin" constant="6" id="zwC-7o-YYQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="videoPreviewImage" destination="56r-Jg-QeK" id="vWG-9S-gz6"/>
+                                            <outlet property="videoTitle" destination="NdD-LS-8ki" id="VX6-GA-q0B"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -116,6 +119,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="Bh4-py-9pN" id="Tx3-Oq-bVQ"/>
                         <segue destination="RMq-CM-QY7" kind="showDetail" identifier="VideoVC" id="327-Kj-lH9"/>
                     </connections>
                 </viewController>
