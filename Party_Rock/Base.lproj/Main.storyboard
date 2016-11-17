@@ -145,10 +145,26 @@
                                     <constraint firstAttribute="height" constant="200" id="q4B-mu-3Ja"/>
                                 </constraints>
                             </webView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kau-WW-WuI">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kau-WW-WuI">
                                 <frame key="frameInset" minY="198" width="375" height="469"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdD-IF-4Ye">
+                                        <frame key="frameInset" minX="8" minY="8" width="359" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="Ag7-OW-ODI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="EdD-IF-4Ye" firstAttribute="centerX" secondItem="Kau-WW-WuI" secondAttribute="centerX" id="89P-vz-mgV"/>
+                                    <constraint firstItem="EdD-IF-4Ye" firstAttribute="leading" secondItem="Kau-WW-WuI" secondAttribute="leadingMargin" id="H3E-cv-gLf"/>
+                                    <constraint firstItem="EdD-IF-4Ye" firstAttribute="trailing" secondItem="Kau-WW-WuI" secondAttribute="trailingMargin" id="h3n-Pn-rwg"/>
+                                    <constraint firstItem="EdD-IF-4Ye" firstAttribute="top" secondItem="Kau-WW-WuI" secondAttribute="topMargin" id="kJ1-mB-mch"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -158,6 +174,10 @@
                             <constraint firstAttribute="trailing" secondItem="IeE-Uy-cGc" secondAttribute="trailing" id="vco-ng-j7O"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="videoLBL" destination="EdD-IF-4Ye" id="Rhk-wI-tLS"/>
+                        <outlet property="webView" destination="IeE-Uy-cGc" id="96M-8b-2wX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W2F-kQ-gp8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

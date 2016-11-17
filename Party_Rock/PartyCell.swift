@@ -22,7 +22,7 @@ class PartyCell: UITableViewCell {
         
         videoTitle.text = partyRock.videoTitle
         
-        // Set up the videoPreviewImage
+        // Set up the videoPreviewImage by downloading from the internet
         
         let url = URL(string: partyRock.imageURL)!
         
